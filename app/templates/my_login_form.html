@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do App</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/loginRegistration.css')}}">
+  </head>
+  <body>
+    <form method="POST" action="/login" novalidate>
+      {{ form.csrf_token }} <!-- {{ form.hidden_tag() }} -->
+      {{ form.username.label }} {{ form.username(size=19) }}<br>
+      {{ form.password.label }} {{ form.password(size=20) }}<br>
+      <a href="{{ url_for('register') }}">Register</a>
+      {{ form.submit }}<br>
+      <small>{{message}}</small>
+    </form>
+  </body>
+</html>

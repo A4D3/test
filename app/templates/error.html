@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% import 'macro.html' as macros %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Error 404</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+  </head>
+  <body>
+    {{ macros.upperMenu() }}
+    <div id="errorMsg">
+      Error 404. Url does not exist.
+    </div>
+  </body>
+</html>

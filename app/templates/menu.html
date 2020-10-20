@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% import 'macro.html' as macros %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do App</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+  </head>
+  <body>
+    {{ macros.upperMenu(user.getAdmin()) }}
+
+    <div id="contentToDO">
+      <h1>To Do List</h1>
+
+      <p>Total : {{user.getTasks()|length}} | Not Done: {{user.getNTasksNotDone()}}<p>
+
+      <table id="listTasks">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Deadline</th>
+            <th>Done</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% set state={True:'✓',False:'❌'} %}
+          {% set tasks=user.getTasks() %}
+          {% for key in tasks %}
+          <tr>
+            <td>{{ tasks[key]['name'] }}</td>
+            <td>{{ tasks[key]['description'] }}</td>
+            <td>{{ tasks[key]['deadline'] }}</td>
+            <td><a href="/done/{{key}}"> <button type="button" name="button" id="doneMenu"> {{ state[tasks[key]['done']] }} </button> </a></td>
+            <td><a href="/delete/{{key}}"> <button type="button" name="button" id="deleteMenu">Delete 🗑</button> </a> <a href="/edit/{{key}}"> <button type="button" name="button" id="editMenu">Edit 🖋</button> </a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+html{
+  background-color: white;
+  font-family: Arial;
+  font-size: 10px;
+}
+
+#content>h1{
+  font-size: 5.5rem;
+}
+
+small{
+  color: red;
+  font-size: 1.5rem;
+}
+
+a>button{
+  cursor: pointer;
+}
+
+input{
+  cursor: pointer;
+}
+
+p{
+  border-bottom: 0.1rem solid lightgrey;
+}
+
+/*Tout ce qui concerne la barre de navigation*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-size: 1.8rem;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+/*Tout ce qui concerne les tableaux*/
+#listUsers{
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 10rem;
+  margin-left: 36rem;
+  font-size: 2rem;
+  width: 100rem;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,td{
+  border-bottom: 0.2rem solid darkgrey;
+  padding: 1rem;
+  text-align: left;
+}
+
+td a{
+  color: white;
+}
+
+#contentToDO{
+  margin-left: 36rem;
+  font-size: 2rem;
+  width: 100rem;
+}
+
+/*Tout les boutons ou les liens*/
+#doneMenu{
+  background-color: white;
+  border: none;
+  color: green;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#doneMenu:hover{
+  font-size: 2rem;
+}
+
+#deleteMenu{
+  background-color: red;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  transition-duration: 0.4s;
+}
+
+#deleteMenu:hover{
+  background-color: #FB8888;
+}
+
+#editMenu{
+  background-color: green;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  transition-duration: 0.4s;
+}
+
+#editMenu:hover{
+  background-color: lightgreen;
+}
+
+#contentEdit, #contentAdd{
+  margin-left: 36rem;
+  font-size: 2rem;
+  width: 100rem;
+}
+
+#submit{
+  background-color: #5EBFFA;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  transition-duration: 0.4s;
+  margin-top: 1rem;
+}
+
+#submit:hover{
+  background-color: lightblue;
+}
+
+#edit,#add{
+  width: 50rem;
+  height: 4rem;
+  font-size: 2rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid lightgrey;
+  transition-duration: 0.4s;
+}
+
+#errorMsg{
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+
+#blockUser{
+  background-color: white;
+  border: none;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#blockUser:hover{
+  font-size: 2.6rem;
+}

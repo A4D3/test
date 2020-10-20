@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do App</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/loginRegistration.css')}}">
+  </head>
+  <body>
+    <form method="POST" action="/register" novalidate>
+      {{ form.csrf_token }} <!-- {{ form.hidden_tag() }} -->
+      {{ form.name.label }} {{ form.name(size=25) }}<br>
+      <small> Maximum 15 caractères </small> <br>
+      {{ form.surname.label }} {{ form.surname(size=21) }}<br>
+      <small> Maximum 15 caractères </small> <br>
+      {{ form.birth.label }} {{ form.birth(size=27) }}<br>
+      <small>Exemple: 04/03/2000</small> <br>
+      {{ form.username.label }} {{ form.username(size=20) }}<br>
+      <small> 5-20 caractères </small> <br>
+      {{ form.password.label }} {{ form.password(size=21) }}<br>
+      <small> Maximum 20 caractères </small> <br>
+      {{ form.passwordVerification.label }} {{ form.passwordVerification(size=21) }}<br>
+      {{ form.submit }}<br>
+      <small>{{message}}</small>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'actionLayout.html' %}
+{% import 'macro.html' as macros %}
+
+{% block forms %}
+<div id="contentEdit">
+  <h1> Updtate task : </h1><br>
+  <form	method="POST" action="/edit/{{key}}" novalidate>
+    {{ form.csrf_token }} <!-- {{ form.hidden_tag() }} -->
+    {{ form.name.label }} {{ form.name(size=25) }}<br>
+    <small> Maximum 15 caractères </small> <br>
+    {{ form.description.label }} {{ form.description }}<br>
+    {{ form.deadline.label }} {{ form.deadline(size=20) }} <br>
+    <small>Exemple: 04/03/2021</small> <br>
+    {{ form.submit }}<br>
+    <small>{{message}}</small>
+  </form>
+</div>
+{% endblock %}

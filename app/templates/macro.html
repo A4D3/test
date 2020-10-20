@@ -1,0 +1,12 @@
+{% macro upperMenu(admin) %}
+<div class="upperMenu">
+  <ul>
+    <li><a href="/">All Tasks</a></li>
+    <li><a href="/add">Add new task</a></li>
+    {% if (admin) %}
+    <li><a href="/adminGestion">Admin</a></li>
+    {% endif %}
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</div>
+{% endmacro %}
